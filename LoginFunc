@@ -1,0 +1,42 @@
+fun logincheckdata(ctx: Context){
+    ctx.html(
+        Page {
+            val loginusernameValue = ctx.formParam(loginusernamefield)
+            val loginpasswordValue = ctx.formParam(loginpasswordfield)
+            if (
+                loginpasswordValue == null
+                || usernamefield == null
+            ){
+                Head {
+                    title{
+                        +"Login Failed"
+                    }
+                }
+                Body{
+                    div {
+                        +"Please fill out all gaps!"
+                    }
+                    div {
+                        form {
+                            action = "./"
+                            label {
+                                button {
+                                    type = ButtonType.submit
+                                    + "Back to Login"
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }else{
+
+            }
+
+
+
+        }
+    )
+
+
+}
